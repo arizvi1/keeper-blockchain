@@ -1,0 +1,45 @@
+{
+	"compiler": {
+		"version": "0.8.19+commit.7dd6d404"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/KEEPER_flattened.sol": "console"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": true,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/KEEPER_flattened.sol": {
+			"keccak256": "0xb311c2c5f8d8fe4ab8a52d84d3f45ccdd96336dd3807761271912092f0429f87",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://8da7095a8539fa9cb394ed05a27744bf048ac4f99eff94e9b17d1b429710cc86",
+				"dweb:/ipfs/QmNtWfsnMgMWZprquMV68bSZRsHcq5aSoyKfMP68CLPWkp"
+			]
+		}
+	},
+	"version": 1
+}

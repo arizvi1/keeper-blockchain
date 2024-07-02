@@ -1,0 +1,240 @@
+{
+	"compiler": {
+		"version": "0.8.19+commit.7dd6d404"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "FLUSH_ADDR",
+				"outputs": [
+					{
+						"internalType": "address payable",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "contractOwner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "_lockedHeartsTotal",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "_nextStakeSharesTotal",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "_shareRate",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "_stakePenaltyTotal",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "_dailyDataCount",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "_stakeSharesTotal",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint40",
+								"name": "_latestStakeId",
+								"type": "uint40"
+							},
+							{
+								"internalType": "uint256",
+								"name": "_unclaimedSatoshisTotal",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "_claimedSatoshisTotal",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "_claimedBtcAddrCount",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "_currentDay",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct IGlobals.GlobalsCache",
+						"name": "",
+						"type": "tuple"
+					},
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "_lockedHeartsTotal",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "_nextStakeSharesTotal",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "_shareRate",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "_stakePenaltyTotal",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "_dailyDataCount",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "_stakeSharesTotal",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint40",
+								"name": "_latestStakeId",
+								"type": "uint40"
+							},
+							{
+								"internalType": "uint256",
+								"name": "_unclaimedSatoshisTotal",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "_claimedSatoshisTotal",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "_claimedBtcAddrCount",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "_currentDay",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct IGlobals.GlobalsCache",
+						"name": "",
+						"type": "tuple"
+					}
+				],
+				"name": "getGlobalsLoad",
+				"outputs": [],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getTreasureBoxAddress",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_receiver",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_amount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "_contractAddress",
+						"type": "address"
+					}
+				],
+				"name": "mint",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/IGlobals.sol": "IGlobals"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": true,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/IGlobals.sol": {
+			"keccak256": "0x7e4aaf4899c0aabcf9c897b01166038ece0eac7975c35c82a21286b4f453cce7",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://d2c96a0fafc73ebb160f58fab6d37453e9e718c72bd97d1a4dad83571978dc40",
+				"dweb:/ipfs/QmXKWrtEreKzcPkXYVJXeQ7xK4TR9WqNjBzKKQYqT2LfPi"
+			]
+		}
+	},
+	"version": 1
+}

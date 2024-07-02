@@ -1,0 +1,1192 @@
+{
+	"compiler": {
+		"version": "0.8.19+commit.7dd6d404"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "owner",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "spender",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "value",
+						"type": "uint256"
+					}
+				],
+				"name": "Approval",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "data0",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "data1",
+						"type": "uint256"
+					},
+					{
+						"indexed": true,
+						"internalType": "bytes20",
+						"name": "btcAddr",
+						"type": "bytes20"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "claimToAddr",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "referrerAddr",
+						"type": "address"
+					}
+				],
+				"name": "Claim",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "data0",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "data1",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "data2",
+						"type": "uint256"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "senderAddr",
+						"type": "address"
+					}
+				],
+				"name": "ClaimAssist",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "data0",
+						"type": "uint256"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "updaterAddr",
+						"type": "address"
+					}
+				],
+				"name": "DailyDataUpdate",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "data0",
+						"type": "uint256"
+					},
+					{
+						"indexed": true,
+						"internalType": "uint40",
+						"name": "stakeId",
+						"type": "uint40"
+					}
+				],
+				"name": "ShareRateChange",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "data0",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "data1",
+						"type": "uint256"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "stakerAddr",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "uint40",
+						"name": "stakeId",
+						"type": "uint40"
+					}
+				],
+				"name": "StakeEnd",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "data0",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "data1",
+						"type": "uint256"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "stakerAddr",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "uint40",
+						"name": "stakeId",
+						"type": "uint40"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "senderAddr",
+						"type": "address"
+					}
+				],
+				"name": "StakeGoodAccounting",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "data0",
+						"type": "uint256"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "stakerAddr",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "uint40",
+						"name": "stakeId",
+						"type": "uint40"
+					}
+				],
+				"name": "StakeStart",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "from",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "to",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "value",
+						"type": "uint256"
+					}
+				],
+				"name": "Transfer",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "data0",
+						"type": "uint256"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "memberAddr",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "entryId",
+						"type": "uint256"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "referrerAddr",
+						"type": "address"
+					}
+				],
+				"name": "XfLobbyEnter",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "data0",
+						"type": "uint256"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "memberAddr",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "entryId",
+						"type": "uint256"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "referrerAddr",
+						"type": "address"
+					}
+				],
+				"name": "XfLobbyExit",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "CLAIM_PHASE_DAYS",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "FLUSH_ADDR",
+				"outputs": [
+					{
+						"internalType": "address payable",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "HEARTS_PER_SATOSHI",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "allocatedSupply",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "owner",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "spender",
+						"type": "address"
+					}
+				],
+				"name": "allowance",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "spender",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "approve",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "account",
+						"type": "address"
+					}
+				],
+				"name": "balanceOf",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes20",
+						"name": "",
+						"type": "bytes20"
+					}
+				],
+				"name": "btcAddressClaims",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "contractOwner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "currentDay",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "dailyData",
+				"outputs": [
+					{
+						"internalType": "uint72",
+						"name": "dayPayoutTotal",
+						"type": "uint72"
+					},
+					{
+						"internalType": "uint72",
+						"name": "dayStakeSharesTotal",
+						"type": "uint72"
+					},
+					{
+						"internalType": "uint56",
+						"name": "dayUnclaimedSatoshisTotal",
+						"type": "uint56"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "beginDay",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "endDay",
+						"type": "uint256"
+					}
+				],
+				"name": "dailyDataRange",
+				"outputs": [
+					{
+						"internalType": "uint256[]",
+						"name": "list",
+						"type": "uint256[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "beforeDay",
+						"type": "uint256"
+					}
+				],
+				"name": "dailyDataUpdate",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "decimals",
+				"outputs": [
+					{
+						"internalType": "uint8",
+						"name": "",
+						"type": "uint8"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "spender",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "subtractedValue",
+						"type": "uint256"
+					}
+				],
+				"name": "decreaseAllowance",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "_lockedHeartsTotal",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "_nextStakeSharesTotal",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "_shareRate",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "_stakePenaltyTotal",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "_dailyDataCount",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "_stakeSharesTotal",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint40",
+								"name": "_latestStakeId",
+								"type": "uint40"
+							},
+							{
+								"internalType": "uint256",
+								"name": "_unclaimedSatoshisTotal",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "_claimedSatoshisTotal",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "_claimedBtcAddrCount",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "_currentDay",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct IGlobals.GlobalsCache",
+						"name": "g",
+						"type": "tuple"
+					},
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "_lockedHeartsTotal",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "_nextStakeSharesTotal",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "_shareRate",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "_stakePenaltyTotal",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "_dailyDataCount",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "_stakeSharesTotal",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint40",
+								"name": "_latestStakeId",
+								"type": "uint40"
+							},
+							{
+								"internalType": "uint256",
+								"name": "_unclaimedSatoshisTotal",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "_claimedSatoshisTotal",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "_claimedBtcAddrCount",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "_currentDay",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct IGlobals.GlobalsCache",
+						"name": "gSnapshot",
+						"type": "tuple"
+					}
+				],
+				"name": "getGlobalsLoad",
+				"outputs": [],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getTreasureBoxAddress",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "globalInfo",
+				"outputs": [
+					{
+						"internalType": "uint256[13]",
+						"name": "",
+						"type": "uint256[13]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "globals",
+				"outputs": [
+					{
+						"internalType": "uint72",
+						"name": "lockedHeartsTotal",
+						"type": "uint72"
+					},
+					{
+						"internalType": "uint72",
+						"name": "nextStakeSharesTotal",
+						"type": "uint72"
+					},
+					{
+						"internalType": "uint40",
+						"name": "shareRate",
+						"type": "uint40"
+					},
+					{
+						"internalType": "uint72",
+						"name": "stakePenaltyTotal",
+						"type": "uint72"
+					},
+					{
+						"internalType": "uint16",
+						"name": "dailyDataCount",
+						"type": "uint16"
+					},
+					{
+						"internalType": "uint72",
+						"name": "stakeSharesTotal",
+						"type": "uint72"
+					},
+					{
+						"internalType": "uint40",
+						"name": "latestStakeId",
+						"type": "uint40"
+					},
+					{
+						"internalType": "uint128",
+						"name": "claimStats",
+						"type": "uint128"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "spender",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "addedValue",
+						"type": "uint256"
+					}
+				],
+				"name": "increaseAllowance",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_receiver",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_amount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "_contractAddress",
+						"type": "address"
+					}
+				],
+				"name": "mint",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "name",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_treasureBoxAddress",
+						"type": "address"
+					}
+				],
+				"name": "setTreasureBoxAddress",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "stakeLists",
+				"outputs": [
+					{
+						"internalType": "uint40",
+						"name": "stakeId",
+						"type": "uint40"
+					},
+					{
+						"internalType": "uint72",
+						"name": "stakedHearts",
+						"type": "uint72"
+					},
+					{
+						"internalType": "uint72",
+						"name": "stakeShares",
+						"type": "uint72"
+					},
+					{
+						"internalType": "uint16",
+						"name": "lockedDay",
+						"type": "uint16"
+					},
+					{
+						"internalType": "uint16",
+						"name": "stakedDays",
+						"type": "uint16"
+					},
+					{
+						"internalType": "uint16",
+						"name": "unlockedDay",
+						"type": "uint16"
+					},
+					{
+						"internalType": "bool",
+						"name": "isAutoStake",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "symbol",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "totalSupply",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "to",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "transfer",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "from",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "to",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "transferFrom",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "treasureBoxAddress",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "xfLobby",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "xfLobbyMembers",
+				"outputs": [
+					{
+						"internalType": "uint40",
+						"name": "headIndex",
+						"type": "uint40"
+					},
+					{
+						"internalType": "uint40",
+						"name": "tailIndex",
+						"type": "uint40"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"events": {
+				"Approval(address,address,uint256)": {
+					"details": "Emitted when the allowance of a `spender` for an `owner` is set by a call to {approve}. `value` is the new allowance."
+				},
+				"Transfer(address,address,uint256)": {
+					"details": "Emitted when `value` tokens are moved from one account (`from`) to another (`to`). Note that `value` may be zero."
+				}
+			},
+			"kind": "dev",
+			"methods": {
+				"allowance(address,address)": {
+					"details": "See {IERC20-allowance}."
+				},
+				"approve(address,uint256)": {
+					"details": "See {IERC20-approve}. NOTE: If `amount` is the maximum `uint256`, the allowance is not updated on `transferFrom`. This is semantically equivalent to an infinite approval. Requirements: - `spender` cannot be the zero address."
+				},
+				"balanceOf(address)": {
+					"details": "See {IERC20-balanceOf}."
+				},
+				"decimals()": {
+					"details": "Returns the number of decimals used to get its user representation. For example, if `decimals` equals `2`, a balance of `505` tokens should be displayed to a user as `5.05` (`505 / 10 ** 2`). Tokens usually opt for a value of 18, imitating the relationship between Ether and Wei. This is the default value returned by this function, unless it's overridden. NOTE: This information is only used for _display_ purposes: it in no way affects any of the arithmetic of the contract, including {IERC20-balanceOf} and {IERC20-transfer}."
+				},
+				"decreaseAllowance(address,uint256)": {
+					"details": "Atomically decreases the allowance granted to `spender` by the caller. This is an alternative to {approve} that can be used as a mitigation for problems described in {IERC20-approve}. Emits an {Approval} event indicating the updated allowance. Requirements: - `spender` cannot be the zero address. - `spender` must have allowance for the caller of at least `subtractedValue`."
+				},
+				"increaseAllowance(address,uint256)": {
+					"details": "Atomically increases the allowance granted to `spender` by the caller. This is an alternative to {approve} that can be used as a mitigation for problems described in {IERC20-approve}. Emits an {Approval} event indicating the updated allowance. Requirements: - `spender` cannot be the zero address."
+				},
+				"name()": {
+					"details": "Returns the name of the token."
+				},
+				"symbol()": {
+					"details": "Returns the symbol of the token, usually a shorter version of the name."
+				},
+				"totalSupply()": {
+					"details": "See {IERC20-totalSupply}."
+				},
+				"transfer(address,uint256)": {
+					"details": "See {IERC20-transfer}. Requirements: - `to` cannot be the zero address. - the caller must have a balance of at least `amount`."
+				},
+				"transferFrom(address,address,uint256)": {
+					"details": "See {IERC20-transferFrom}. Emits an {Approval} event indicating the updated allowance. This is not required by the EIP. See the note at the beginning of {ERC20}. NOTE: Does not update the allowance if the current allowance is the maximum `uint256`. Requirements: - `from` and `to` cannot be the zero address. - `from` must have a balance of at least `amount`. - the caller must have allowance for ``from``'s tokens of at least `amount`."
+				}
+			},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/GlobalsAndUtility.sol": "GlobalsAndUtility"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": true,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"@openzeppelin/contracts/token/ERC20/ERC20.sol": {
+			"keccak256": "0xa56ca923f70c1748830700250b19c61b70db9a683516dc5e216694a50445d99c",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://cac938788bc4be12101e59d45588b4e059579f4e61062e1cda8d6b06c0191b15",
+				"dweb:/ipfs/QmV2JKCyjTVH3rkWNrfdJRhAT7tZ3usAN2XcnD4h53Mvih"
+			]
+		},
+		"@openzeppelin/contracts/token/ERC20/IERC20.sol": {
+			"keccak256": "0x287b55befed2961a7eabd7d7b1b2839cbca8a5b80ef8dcbb25ed3d4c2002c305",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://bd39944e8fc06be6dbe2dd1d8449b5336e23c6a7ba3e8e9ae5ae0f37f35283f5",
+				"dweb:/ipfs/QmPV3FGYjVwvKSgAXKUN3r9T9GwniZz83CxBpM7vyj2G53"
+			]
+		},
+		"@openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol": {
+			"keccak256": "0x8de418a5503946cabe331f35fe242d3201a73f67f77aaeb7110acb1f30423aca",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://5a376d3dda2cb70536c0a45c208b29b34ac560c4cb4f513a42079f96ba47d2dd",
+				"dweb:/ipfs/QmZQg6gn1sUpM8wHzwNvSnihumUCAhxD119MpXeKp8B9s8"
+			]
+		},
+		"@openzeppelin/contracts/utils/Context.sol": {
+			"keccak256": "0xe2e337e6dde9ef6b680e07338c493ebea1b5fd09b43424112868e9cc1706bca7",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://6df0ddf21ce9f58271bdfaa85cde98b200ef242a05a3f85c2bc10a8294800a92",
+				"dweb:/ipfs/QmRK2Y5Yc6BK7tGKkgsgn3aJEQGi5aakeSPZvS65PV8Xp3"
+			]
+		},
+		"contracts/GlobalsAndUtility.sol": {
+			"keccak256": "0x26992b57dbe3ac4fe34fa4e60123cbbd7df387f66ef7e5c66043092b78f9af5e",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://3224344840e754e70eccfcb4250a7f18f726e642ad51d3966d7e65ea5185584c",
+				"dweb:/ipfs/QmThbJk268hoRpnmU55WTfkypzZrvBFwoERWStpX9pXeV7"
+			]
+		},
+		"contracts/IGlobals.sol": {
+			"keccak256": "0x7e4aaf4899c0aabcf9c897b01166038ece0eac7975c35c82a21286b4f453cce7",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://d2c96a0fafc73ebb160f58fab6d37453e9e718c72bd97d1a4dad83571978dc40",
+				"dweb:/ipfs/QmXKWrtEreKzcPkXYVJXeQ7xK4TR9WqNjBzKKQYqT2LfPi"
+			]
+		},
+		"hardhat/console.sol": {
+			"keccak256": "0x7434453e6d3b7d0e5d0eb7846ffdbc27f0ccf3b163591263739b628074dc103a",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://49355f780520494d1d5a0f01858385e51bb5280ce0ecfb960f16995065dca395",
+				"dweb:/ipfs/QmSwJ6C5QLz6xKeQZS8wbwjU1KxRFTYfwbGmtzisd5sRW4"
+			]
+		}
+	},
+	"version": 1
+}
